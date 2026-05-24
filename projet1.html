@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet 11 — Portfolio Yasin</title>
+  <link rel="stylesheet" href="projet1.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a href="index.html" class="nav-logo">Portfolio - Yasin<span>.</span></a>
+    <div class="nav-menu">
+      <a href="index.html">Accueil</a>
+      <a href="projet.html" class="active">Projets</a>
+      <a href="bilans.html">Bilans</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <section class="detail-header">
+    <a href="projet.html" class="back-link">← Retour aux projets</a>
+    <div class="detail-eyebrow">
+      <span class="eyebrow-line"></span>
+      Projet 11 — 1ère année BUT R&T
+    </div>
+    <h1 class="detail-title">Sensibilisation à l'hygiène<br>informatique et à la <em>cybersécurité</em></h1>
+    <div class="detail-tags">
+      <span class="dtag">Cybersécurité</span>
+      <span class="dtag">MOOC</span>
+      <span class="dtag">Travail de groupe</span>
+      <span class="dtag">Diaporama</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">
+      <span class="section-label-text">Contexte & objectifs</span>
+      <span class="section-label-line"></span>
+    </div>
+    <div class="detail-grid">
+      <div class="detail-main">
+        <p>Ce projet avait pour objectif de nous sensibiliser aux enjeux de la sécurité informatique et aux bonnes pratiques numériques. Il s'est déroulé en deux phases : une formation individuelle en ligne (MOOC) suivie d'un travail de groupe.</p>
+        <p>Le MOOC était composé de plusieurs chapitres couvrant les fondamentaux de la cybersécurité. Chaque chapitre devait être validé pour progresser dans la formation et obtenir la certification finale.</p>
+        <p>En groupe, nous avons ensuite préparé et présenté un diaporama sur le thème <strong>« Découverte des machines du réseau »</strong>, ce qui nous a permis d'approfondir nos connaissances et de travailler la communication technique.</p>
+      </div>
+      <div class="detail-side">
+        <div class="side-info-block">
+          <div class="sib-label">Formation</div>
+          <div class="sib-value">BUT Réseaux & Télécommunications</div>
+        </div>
+        <div class="side-info-block">
+          <div class="sib-label">Type</div>
+          <div class="sib-value">MOOC individuel + présentation de groupe</div>
+        </div>
+        <div class="side-info-block">
+          <div class="sib-label">Thème présenté</div>
+          <div class="sib-value">Découverte des machines du réseau</div>
+        </div>
+        <div class="side-info-block">
+          <div class="sib-label">Statut</div>
+          <div class="sib-value sib-done">Terminé</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">
+      <span class="section-label-text">Déroulement</span>
+      <span class="section-label-line"></span>
+    </div>
+    <div class="steps-list">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3>Formation MOOC</h3>
+          <p>Suivi d'un parcours en ligne composé de plusieurs modules sur la cybersécurité : menaces courantes, bonnes pratiques, protection des données, sécurité des réseaux. Validation de chaque chapitre par des quiz ou exercices.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3>Travail de groupe — Préparation du diaporama</h3>
+          <p>En groupe, nous avons réparti les rôles et les parties du sujet. Chaque membre a contribué à la recherche, à la rédaction des diapositives et à la mise en forme de la présentation.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3>Présentation orale</h3>
+          <p>Après avoir finalisé notre diaporama, nous l’avons présenté au professeur ainsi qu’à l’ensemble de la classe afin d’être évalués. Chacun a exposé sa partie à tour de rôle. Vous trouverez ci-dessous quelques pages de la mienne : « Découverte des machines du réseau ».</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIE PHOTOS -->
+  <section>
+    <div class="section-label">
+      <span class="section-label-text">Galerie</span>
+      <span class="section-label-line"></span>
+    </div>
+    <div class="carousel">
+      <button class="carousel-btn prev" onclick="moveSlide('carousel11', -1)">&#8592;</button>
+      <div class="carousel-track-wrap">
+        <div class="carousel-track" id="carousel11">
+          <div class="carousel-slide">
+            <div class="slide-placeholder">
+              <span class="slide-icon">&#128247;</span>
+              <span>Photo 1 — <img src="capture/Projet1/p11-1.jpg.jpg"></span>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="slide-placeholder">
+              <span class="slide-icon">&#128247;</span>
+              <span>Photo 2 — <img src="capture/Projet1/p11-2.jpg.jpg"></span>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="slide-placeholder">
+              <span class="slide-icon">&#128247;</span>
+              <span>Photo 3 — <img src="capture/Projet1/p11-3.jpg.jpg"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn next" onclick="moveSlide('carousel11', 1)">&#8594;</button>
+      <div class="carousel-dots" id="dots-carousel11">
+        <span class="dot active" onclick="goToSlide('carousel11', 0)"></span>
+        <span class="dot" onclick="goToSlide('carousel11', 1)"></span>
+        <span class="dot" onclick="goToSlide('carousel11', 2)"></span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">
+      <span class="section-label-text">Compétences - Assister l’administrateur du réseau</span>
+      <span class="section-label-line"></span>
+    </div>
+    <div class="skills-blocks">
+      <div class="skill-block">
+        <div class="sb-title">AC11.02</div>
+        <p> Comprendre l’architecture et les fondements des systèmes numériques, les principes du codage de l’information, des communications et de l’Internet</p>
+      </div>
+      <div class="skill-block">
+        <div class="sb-title">AC11.04</div>
+        <p>Maîtriser les rôles et les principes fondamentaux des systèmes d’exploitation afin d’interagir avec ceux-ci pour la configuration et l’administration des réseaux et services fournis</p>
+      </div>
+      <div class="skill-block">
+        <div class="sb-title">AC11.05</div>
+        <p> Identifier les dysfonctionnements du réseau local et savoir les signaler</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">
+      <span class="section-label-text">Bilan personnel</span>
+      <span class="section-label-line"></span>
+    </div>
+    <div class="bilan-block">
+      <p>Première immersion dans le domaine de la cybersécurité, mais aussi une étape importante dans l’informatique et les réseaux. Ce projet m’a permis de découvrir de nombreuses notions et de valider ma formation MOOC. J’ai également renforcé ma capacité à travailler en équipe.</p>
+    </div>
+  </section>
+
+</div>
+<script src="carousel.js"></script>
+</body>
+</html>

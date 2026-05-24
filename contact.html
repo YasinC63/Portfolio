@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Portfolio Yasin</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a href="index.html" class="nav-logo">Portfolio - Yasin<span>.</span></a>
+    <div class="nav-menu">
+      <a href="index.html">Accueil</a>
+      <a href="projet.html">Projets</a>
+      <a href="bilans.html">Bilans</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="contact-header">
+    <div class="detail-eyebrow">
+      <span class="eyebrow-line"></span>
+      Disponible pour stage & alternance
+    </div>
+    <h1 class="detail-title">Me <em>contacter</em></h1>
+    <p class="header-desc">Tu as une opportunité, une question ou tu veux simplement échanger ? N'hésite pas à me laisser un message.</p>
+  </section>
+
+  <!-- CONTENU -->
+  <section class="contact-section">
+    <div class="contact-grid">
+
+      <!-- FORMULAIRE -->
+      <div class="form-block">
+        <div class="form-row">
+          <div class="input-group">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" placeholder="Votre nom" />
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="votre@email.com" />
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="sujet">Objet</label>
+          <input type="text" id="sujet" placeholder="Opportunité d'alternance, question..." />
+        </div>
+        <div class="input-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="6" placeholder="Votre message..."></textarea>
+        </div>
+        <button class="btn-send" onclick="handleSubmit()">Envoyer le message →</button>
+        <div class="form-feedback" id="feedback"></div>
+      </div>
+
+      <!-- INFOS -->
+      <div class="info-block">
+
+        <div class="info-card">
+          <div class="info-label">Formation</div>
+          <div class="info-value">BUT Réseaux & Télécoms<br>Université de Caen</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-label">Localisation</div>
+          <div class="info-value">Caen,<br> Flers, <br> Normandie</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-label">Disponibilité</div>
+          <div class="info-value avail">Disponible pour une alternance</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-label">Retrouve-moi sur</div>
+          <div class="social-links">
+            <a href="https://github.com/YasinC63" target="_blank" class="social-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+function handleSubmit() {
+  const nom = document.getElementById('nom').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const feedback = document.getElementById('feedback');
+
+  if (!nom || !email || !message) {
+    feedback.textContent = 'Merci de remplir tous les champs obligatoires.';
+    feedback.className = 'form-feedback error';
+    return;
+  }
+
+  feedback.textContent = 'Message envoyé ! Je te répondrai dès que possible.';
+  feedback.className = 'form-feedback success';
+
+  document.getElementById('nom').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('sujet').value = '';
+  document.getElementById('message').value = '';
+}
+</script>
+</body>
+</html>

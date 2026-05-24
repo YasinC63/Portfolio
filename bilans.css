@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #141414; --bg2: #1c1c1c; --bg3: #242424; --bg4: #2e2e2e;
+  --yellow: #f5c518; --yellow2: #e6b800;
+  --yellow-dim: rgba(245,197,24,0.12);
+  --text: #f0ede8; --text2: #a8a49e; --text3: #6a6760;
+  --border: rgba(255,255,255,0.07); --border-y: rgba(245,197,24,0.2);
+  --green: #22c55e; --green-dim: rgba(34,197,94,0.1);
+  --orange: #f59e0b; --orange-dim: rgba(245,158,11,0.1);
+  --red: #ef4444; --red-dim: rgba(239,68,68,0.1);
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Space Grotesk', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 1.5rem 5rem; }
+
+/* NAV */
+nav { display: flex; justify-content: space-between; align-items: center; padding: 1.6rem 0; border-bottom: 0.5px solid var(--border); }
+.nav-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; font-style: italic; color: var(--text); text-decoration: none; }
+.nav-logo span { color: var(--yellow); }
+.nav-menu { display: flex; gap: 0.2rem; }
+.nav-menu a { font-size: 12px; font-weight: 500; color: var(--text2); text-decoration: none; padding: 7px 14px; border-radius: 5px; letter-spacing: 0.05em; text-transform: uppercase; transition: background 0.15s, color 0.15s; }
+.nav-menu a:hover { background: var(--bg3); color: var(--text); }
+.nav-menu a.active { background: var(--yellow); color: #111; font-weight: 600; }
+
+/* SECTIONS */
+section { padding: 3.5rem 0; border-bottom: 0.5px solid var(--border); }
+section:last-child { border-bottom: none; }
+.section-label { display: flex; align-items: center; gap: 12px; margin-bottom: 1.6rem; }
+.section-label-text { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--yellow); white-space: nowrap; }
+.section-label-line { flex: 1; height: 0.5px; background: var(--border); }
+
+/* HEADER */
+.detail-header { padding: 3.5rem 0 3rem; border-bottom: 0.5px solid var(--border); }
+.detail-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1.2rem; }
+.eyebrow-line { width: 24px; height: 1px; background: var(--yellow); display: inline-block; }
+.detail-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 700; line-height: 1.06; letter-spacing: -0.02em; color: var(--text); margin-bottom: 1.2rem; }
+.detail-title em { font-style: italic; color: var(--yellow); }
+.header-desc { font-size: 14.5px; color: var(--text2); line-height: 1.8; max-width: 560px; font-weight: 300; }
+
+/* =====================
+   PROGRESS CARDS
+   ===================== */
+.progress-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+}
+
+.progress-card {
+  background: var(--bg);
+  padding: 1.4rem 1.6rem;
+  transition: background 0.2s;
+}
+
+.progress-card:hover { background: var(--bg2); }
+
+.progress-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.progress-domain {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.progress-pct {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--yellow);
+  letter-spacing: 0.04em;
+}
+
+.progress-bar-wrap {
+  height: 3px;
+  background: var(--bg4);
+  border-radius: 2px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--yellow);
+  border-radius: 2px;
+  transition: width 0.6s ease;
+}
+
+.progress-desc {
+  font-size: 12.5px;
+  color: var(--text2);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* =====================
+   SKILLS STATE
+   ===================== */
+.skills-state-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+}
+
+.skills-state-col {
+  background: var(--bg);
+  padding: 1.4rem 1.5rem;
+}
+
+.state-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.state-ok { color: var(--green); }
+.state-ok .state-dot { background: var(--green); }
+.state-wip { color: var(--orange); }
+.state-wip .state-dot { background: var(--orange); }
+.state-todo { color: var(--red); }
+.state-todo .state-dot { background: var(--red); }
+
+.state-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.state-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.state-list li {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.5;
+  font-weight: 300;
+  padding-left: 12px;
+  position: relative;
+}
+
+.state-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--text3);
+  font-size: 10px;
+}
+
+/* =====================
+   SEMESTER CARDS
+   ===================== */
+.semester-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+}
+
+.semester-card {
+  background: var(--bg);
+  padding: 1.8rem 2rem;
+  transition: background 0.2s;
+  position: relative;
+}
+
+.semester-card:hover { background: var(--bg2); }
+
+.semester-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.semester-num {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+
+.semester-status {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 3px;
+}
+
+.status-done { background: var(--green-dim); color: var(--green); border: 0.5px solid rgba(34,197,94,0.2); }
+.status-wip { background: var(--orange-dim); color: var(--orange); border: 0.5px solid rgba(245,158,11,0.2); }
+
+.semester-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.semester-card > p {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  max-width: 680px;
+}
+
+.semester-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 1.2rem;
+}
+
+.stag {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text2);
+  background: var(--bg2);
+  border: 0.5px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 3px;
+}
+
+.semester-reflection {
+  border-left: 2px solid var(--yellow);
+  padding-left: 1rem;
+}
+
+.ref-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 6px;
+}
+
+.semester-reflection p {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* =====================
+   PERSONAL CARDS
+   ===================== */
+.personal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+}
+
+.personal-card {
+  background: var(--bg);
+  padding: 1.5rem 1.6rem;
+  transition: background 0.2s;
+}
+
+.personal-card:hover { background: var(--bg2); }
+
+.personal-num {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--yellow);
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.personal-card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.personal-card p {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+@media (max-width: 720px) {
+  .detail-title { font-size: 2rem; }
+  .progress-grid { grid-template-columns: 1fr; }
+  .skills-state-grid { grid-template-columns: 1fr; }
+  .personal-grid { grid-template-columns: 1fr; }
+  .nav-menu a { padding: 6px 9px; font-size: 11px; }
+}

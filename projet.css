@@ -1,0 +1,227 @@
+ .sae-hero {
+      padding: 4.5rem 0 4rem;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+.sae-hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 320px;
+      gap: 3rem;
+      align-items: end;
+    }
+
+.sae-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.2rem;
+    }
+
+.sae-title em {
+      color: var(--yellow);
+      font-style: italic;
+    }
+
+.sae-desc {
+      max-width: 560px;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text2);
+      font-weight: 300;
+    }
+
+.sae-side-card {
+      border: 0.5px solid var(--border);
+      background: var(--bg2);
+      padding: 1.4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+.sae-side-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--yellow);
+    }
+
+.side-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--yellow);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+.side-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+.side-item span {
+      display: block;
+    }
+
+.side-item .k {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text3);
+      margin-bottom: 5px;
+    }
+
+.side-item .v {
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+/* =====================
+   SAE LIST
+   ===================== */
+.sae-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--border);
+    }
+
+.sae-card {
+      background: var(--bg);
+      padding: 2rem;
+      transition: background 0.2s;
+      position: relative;
+    }
+
+.sae-card:hover {
+      background: var(--bg2);
+    }
+
+.sae-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      margin-bottom: 1.4rem;
+    }
+
+.sae-number {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--yellow);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+.sae-card h2 {
+      font-size: 1.2rem;
+      color: var(--text);
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+.sae-status {
+      white-space: nowrap;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 6px 12px;
+      border-radius: 3px;
+      border: 0.5px solid var(--border-y);
+      background: var(--yellow-dim);
+      color: var(--yellow);
+      font-weight: 600;
+    }
+
+.sae-content {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 2rem;
+    }
+
+.sae-text p {
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.9;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+
+.sae-text strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+.sae-meta {
+      border-left: 0.5px solid var(--border);
+      padding-left: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+.meta-block .meta-title {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text3);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+.meta-block .meta-text {
+      font-size: 12px;
+      line-height: 1.8;
+      color: var(--text2);
+    }
+
+.coming-soon {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 0.5rem;
+      font-size: 11px;
+      color: var(--yellow);
+    }
+
+.coming-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--yellow);
+    }
+
+    /* =====================
+       RESPONSIVE
+       ===================== */
+    @media (max-width: 720px) {
+
+      .sae-hero-grid,
+      .sae-content,
+      .sae-top {
+        grid-template-columns: 1fr;
+        display: grid;
+      }
+
+      .sae-top {
+        gap: 1rem;
+      }
+
+      .sae-meta {
+        border-left: none;
+        border-top: 0.5px solid var(--border);
+        padding-left: 0;
+        padding-top: 1.5rem;
+      }
+
+      .sae-title {
+        font-size: 2.2rem;
+      }
+    }

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet 12 — Portfolio Yasin</title>
+  <link rel="stylesheet" href="projet2.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a href="index.html" class="nav-logo">Portfolio - Yasin<span>.</span></a>
+    <div class="nav-menu">
+      <a href="index.html">Accueil</a>
+      <a href="projet.html" class="active">Projets</a>
+      <a href="bilans.html">Bilans</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <section class="detail-header">
+    <a href="projet.html" class="back-link">← Retour aux projets</a>
+    <div class="detail-eyebrow">
+      <span class="eyebrow-line"></span>
+      Projet 12 — 1ère année BUT R&T
+    </div>
+    <h1 class="detail-title">S'initier aux <em>réseaux</em><br>informatiques</h1>
+    <div class="detail-tags">
+      <span class="dtag">Réseaux</span>
+      <span class="dtag">Infrastructure</span>
+      <span class="dtag">Groupe de 4</span>
+      <span class="dtag">Simulation</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">
+      <span class="section-label-text">Contexte & objectifs</span>
+      <span class="section-label-line"></span>
+    </div>
+    <div class="detail-grid">
+      <div class="detail-main">
+        <p>L'objectif de ce projet était de concevoir et développer un mini réseau fonctionnel en groupe de 4, répondant aux critères techniques d'une entreprise fictive définie dans le cahier des charges.</p>
+        <p>Nous avons dû analyser les besoins de l'entreprise, choisir l'architecture adaptée, configurer les équipements et valider le bon fonctionnement de l'ensemble du réseau.</p>
+        <p>Ce projet nous a permis de mettre en pratique les bases des réseaux vues en cours : adressage IP, routage, configuration de switchs et routeurs, segmentation du réseau.</p>
+      </div>
+      <div class="detail-side">
+        <div class="side-info-block">
+          <div class="sib-label">Formation</div>
+          <div class="sib-value">BUT Réseaux & Télécommunications</div>
+        </div>
+        <div class="side-info-block">
+          <div class="sib-label">Type</div>
+          <div class="sib-value">Projet technique en groupe de 4</div>
+        </div>
+        <div class="side-info-block">
+          <div class="sib-label">Outils utilisés</div>
+          <div class="sib-value">Cisco Packet Tracer<br> GNS3 <br> Visio</div>
+        </div>
+        <div class="side-info-block">
+          <div class="sib-label">Statut</div>
+          <div class="sib-value sib-done">Terminé</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">
+      <span class="section-label-text">Déroulement</span>
+      <span class="section-label-line"></span>
+    </div>
+    <div class="steps-list">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3>Analyse du cahier des charges</h3>
+          <p>Lecture et compréhension des besoins de l'entreprise fictive : nombre de postes, services à interconnecter, contraintes de sécurité, accès Internet. Définition des objectifs techniques à atteindre.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3>Conception de l'architecture</h3>
+          <p>Élaboration du schéma réseau : choix de la topologie, plan d'adressage IP, segmentation en sous-réseaux, positionnement des équipements (routeurs, switchs, serveurs).</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3>Configuration et tests</h3>
+          <p>Mise en place du réseau sur simulateur, configuration des interfaces, des routes et des services. Tests de connectivité entre les différentes machines et validation des critères du cahier des charges.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h3>Rendu final</h3>
+          <p>Nous avons rendu notre schéma à une date fixée, et le professeur est venu nous évaluer directement sur notre poste de travail en groupe. Nous avons également réalisé un TP noté dans le cadre de ce projet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIE PHOTOS -->
+  <section>
+    <div class="section-label">
+      <span class="section-label-text">Galerie</span>
+      <span class="section-label-line"></span>
+    </div>
+    <div class="carousel">
+      <button class="carousel-btn prev" onclick="moveSlide('carousel12', -1)">&#8592;</button>
+      <div class="carousel-track-wrap">
+        <div class="carousel-track" id="carousel12">
+          <div class="carousel-slide">
+            <div class="slide-placeholder">
+              <span class="slide-icon">&#128247;</span>
+              <span>Photo 1 — <img src="capture/Projet2/p12-3.jpg"></span>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="slide-placeholder">
+              <span class="slide-icon">&#128247;</span>
+              <span>Photo 2 — <img src="capture/Projet2/p12-1.jpg.png"></span>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="slide-placeholder">
+              <span class="slide-icon">&#128247;</span>
+              <span>Photo 3 — <img src="capture/Projet2/p12-2.jpg"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn next" onclick="moveSlide('carousel12', 1)">&#8594;</button>
+      <div class="carousel-dots" id="dots-carousel12">
+        <span class="dot active" onclick="goToSlide('carousel12', 0)"></span>
+        <span class="dot" onclick="goToSlide('carousel12', 1)"></span>
+        <span class="dot" onclick="goToSlide('carousel12', 2)"></span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">
+      <span class="section-label-text">Compétences - Assister l’administrateur du réseau</span>
+      <span class="section-label-line"></span>
+    </div>
+    <div class="skills-blocks">
+      <div class="skill-block">
+        <div class="sb-title">AC11.01</div>
+        <p>Maîtriser les lois fondamentales de l’électricité afin d’intervenir sur des équipements de réseaux et télécommunications</p>
+      </div>
+      <div class="skill-block">
+        <div class="sb-title">AC11.02</div>
+        <p>Comprendre l’architecture et les fondements des systèmes numériques, les principes du codage de l’information, des communications et de l’Internet</p>
+      </div>
+      <div class="skill-block">
+        <div class="sb-title">AC11.03</div>
+        <p>Configurer les fonctions de base du réseau local</p>
+      </div>
+      <div class="skill-block">
+        <div class="sb-title">AC11.04</div>
+        <p>Maîtriser les rôles et les principes fondamentaux des systèmes d’exploitation afin d’interagir avec ceux-ci pour la configuration et l’administration des réseaux et services fournis</p>
+      </div>
+      <div class="skill-block">
+        <div class="sb-title">AC11.05</div>
+        <p>Identifier les dysfonctionnements du réseau local et savoir les signaler</p>
+      </div>
+      <div class="skill-block">
+        <div class="sb-title">AC11.06</div>
+        <p>Installer un poste client, expliquer la procédure mise en place</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">
+      <span class="section-label-text">Bilan personnel</span>
+      <span class="section-label-line"></span>
+    </div>
+    <div class="bilan-block">
+      <p>Ce projet a été le plus important du premier semestre et m’a offert une véritable immersion dans le monde professionnel. Il a été exigeant et parfois difficile, mais il m’a permis de progresser et de mieux comprendre les attentes du travail en équipe et en environnement technique. </p>
+    </div>
+  </section>
+
+</div>
+<script src="carousel.js"></script>
+</body>
+</html>
